@@ -1,31 +1,26 @@
-// RiceDAOCards.tsx
-
 import Link from 'next/link';
 import ActionAreaCard from './Article';
 
-// RiceDAO オブジェクトの型定義
 interface RiceDAO {
   id: string;
   title: string;
   image: string;  // 画像のURLを示す文字列と仮定します
+  body: string;
 }
 
 // RiceDAOCards コンポーネントのProps型定義
 interface RiceDAOCardsProps {
-  ricedao: RiceDAO[];  // RiceDAOオブジェクトの配列を指定
+  ricedao: RiceDAO;  // RiceDAOオブジェクトを指定
 }
 
 const RiceDAOCards: React.FC<RiceDAOCardsProps> = ({ ricedao }) => {
   return (
-    <div>
-      {ricedao.map((item) => (
-        <li key={item.id}>
-          <Link href={`/ricedao/${item.id}`}>
-            {item.title}
-          </Link>
-          <ActionAreaCard image={item.image} title={item.title} />
-        </li>
-      ))}
+    <div style={{ marginBottom: '20px' }}>
+      <Link href={`/ricedao/${ricedao.id}`}>
+        
+          <ActionAreaCard body={ricedao.body} title={ricedao.title} subtitle={undefined} />
+        
+      </Link>
     </div>
   );
 };

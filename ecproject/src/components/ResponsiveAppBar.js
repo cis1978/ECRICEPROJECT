@@ -1,3 +1,5 @@
+
+
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -14,7 +16,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { Adb as AdbIcon } from '@mui/icons-material';
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['お米を買う', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -161,6 +163,3 @@ function ResponsiveAppBar() {
   );
 }
 export default ResponsiveAppBar;
-
-
-

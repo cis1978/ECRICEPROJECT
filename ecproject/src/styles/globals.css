@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -10,92 +9,135 @@ body {
     transparent,
     rgb(var(--background-end-rgb))
   ) rgb(var(--background-start-rgb));
- }
+}
 
 @layer utilities {
- .text-balance {
-   text-wrap: balance;
- }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+
+
+.mainarticle {
+  float: left;
+  display: flex;
+  width: 40%;
+  height: 600px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center;     /* 縦方向の中央揃え */
+  height: 300px;
+  width: 100%;
+}
+
+.image-size {
+  width: 1000px;
+  height: 300px;
+}
+
+.footerr {
+  background-color: #094;
+}
+
+.rankingcontents {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+}
+
+
+.RiceDAOcards{
+  display: flex;
 }
 
 .container {
-  background-color: aqua;
-  width: 60%;
-  float: right;
+  
+  width: 100%;
+  
   height: 600px;
   display: flex;
-  flex-wrap: wrap;  /* 要素が折り返し可能 */
+  flex-wrap: wrap; /* 要素が折り返し可能 */
+  margin-top: 170px; /* ヘッダーの高さ分のマージンを追加 */
 }
 
 .Leftupcontents {
   display: flex;
-  width: 47%;  /* コンテナ幅の50% */
-  height: 47%;  /* コンテナ高さの50% */
-  align-items: flex-start;  /* 上に寄せる */
-  justify-content: flex-start;  /* 左に寄せる */
+height: 100%;
+  background-color: #094;
 }
+
+    
+  
+  
+
 
 .Leftdowncontents {
   display: flex;
-  flex: end;
-  width: 47%;
-  height: 47%;
+  width: 47%;  /* コンテナ幅の47% */
+  height: 47%;  /* コンテナ高さの47% */
   align-items: flex-end;  /* 下に寄せる */
   justify-content: flex-start;  /* 左に寄せる */
 }
 
 .Rightupcontents {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  width: 47%;
-  height: 47%;
+  justify-content: flex-end;  /* 右に寄せる */
+  align-items: flex-start;  /* 上に寄せる */
+  width: 47%;  /* コンテナ幅の47% */
+  height: 47%;  /* コンテナ高さの47% */
 }
-
-
 
 .Rightdowncontents {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 47%;
-  height: 47%;
+  justify-content: flex-end;  /* 右に寄せる */
+  align-items: flex-end;  /* 下に寄せる */
+  width: 47%;  /* コンテナ幅の47% */
+  height: 47%;  /* コンテナ高さの47% */
 }
 
-.mainarticle{
-  float: left;
-  display: flex;
-  width: 40%;
-  height: 600px;
-  
-}
 
-.banner{
-  
-  display: flex;
-  justify-content: center; /* 横方向の中央揃え */
-  align-items: center;     /* 縦方向の中央揃え */
-  height: 300px;
+.headercontainer {
+  position: fixed;
+  background-color: white;
+  top: 0;
   width: 100%;
-
-}
-.image-size {
-  width: 1000px;
-  height: 300px;
-}
-
-.footerr{
-  background-color: #094;
-}
-
-
-
-.rankingcontents{
+  height: 150px; /* ヘッダーの高さを指定 */
+  z-index: 1000; /* 重なり順を調整 */
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  height:300px;
-  align-items: center;
   justify-content: center;
-  background-color: blue;
+  align-items: center;
+  border-bottom: 1px solid #000; /* 下部にレイアウト線を追加 */
+}
+
+.total-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* 追加 */
+  margin-top: 75px; /* 追加 */
+}
+
+.logo{
+  width: 15%;
+  display: grid;
+  justify-content: center; /* 変更 */
+  align-items: center;
+  position: absolute; /* 追加 */
+  left: 50%; /* 追加 */
+  top: 10px; /* 追加 */
+  transform: translateX(-50%); /* 追加 */
+}
+.adv{
+top: 0;
+height: 70%;
+width: 100%;
 }
