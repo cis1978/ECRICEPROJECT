@@ -6,6 +6,7 @@ interface RiceDAO {
   title: string;
   image: string;  // 画像のURLを示す文字列と仮定します
   body: string;
+  
 }
 
 // RiceDAOCards コンポーネントのProps型定義
@@ -15,12 +16,19 @@ interface RiceDAOCardsProps {
 
 const RiceDAOCards: React.FC<RiceDAOCardsProps> = ({ ricedao }) => {
   return (
-    <div style={{ marginBottom: '20px' }}>
+    <div >
       <Link href={`/ricedao/${ricedao.id}`}>
         
-          <ActionAreaCard body={ricedao.body} title={ricedao.title} subtitle={undefined} />
-        
+          <ActionAreaCard 
+          body={ricedao.body} 
+          title={ricedao.title} 
+          subtitle={undefined}
+          />
+         
       </Link>
+
+
+
     </div>
   );
 };

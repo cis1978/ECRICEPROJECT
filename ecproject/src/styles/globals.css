@@ -20,89 +20,12 @@ body {
 
 
 
-.mainarticle {
-  float: left;
-  display: flex;
-  width: 40%;
-  height: 600px;
-}
-
-.banner {
-  display: flex;
-  justify-content: center; /* 横方向の中央揃え */
-  align-items: center;     /* 縦方向の中央揃え */
-  height: 300px;
-  width: 100%;
-}
-
-.image-size {
-  width: 1000px;
-  height: 300px;
-}
-
-.footerr {
-  background-color: #094;
-}
-
-.rankingcontents {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 300px;
-  align-items: center;
-  justify-content: center;
-  background-color: blue;
-}
-
 
 .RiceDAOcards{
   display: flex;
 }
 
-.container {
-  
-  width: 100%;
-  
-  height: 600px;
-  display: flex;
-  flex-wrap: wrap; /* 要素が折り返し可能 */
-  margin-top: 170px; /* ヘッダーの高さ分のマージンを追加 */
-}
 
-.Leftupcontents {
-  display: flex;
-height: 100%;
-  background-color: #094;
-}
-
-    
-  
-  
-
-
-.Leftdowncontents {
-  display: flex;
-  width: 47%;  /* コンテナ幅の47% */
-  height: 47%;  /* コンテナ高さの47% */
-  align-items: flex-end;  /* 下に寄せる */
-  justify-content: flex-start;  /* 左に寄せる */
-}
-
-.Rightupcontents {
-  display: flex;
-  justify-content: flex-end;  /* 右に寄せる */
-  align-items: flex-start;  /* 上に寄せる */
-  width: 47%;  /* コンテナ幅の47% */
-  height: 47%;  /* コンテナ高さの47% */
-}
-
-.Rightdowncontents {
-  display: flex;
-  justify-content: flex-end;  /* 右に寄せる */
-  align-items: flex-end;  /* 下に寄せる */
-  width: 47%;  /* コンテナ幅の47% */
-  height: 47%;  /* コンテナ高さの47% */
-}
 
 
 .headercontainer {
@@ -136,8 +59,96 @@ height: 100%;
   top: 10px; /* 追加 */
   transform: translateX(-50%); /* 追加 */
 }
-.adv{
-top: 0;
-height: 70%;
-width: 100%;
+
+.adv {
+  height: 400px;
+  width: 100%;
+}
+
+.adv img {
+  width: 100%;
+  height: 100%; /* 親要素の高さに合わせる */
+ 
+}
+
+
+.pickupnews{
+  
+  width: 100%; 
+  display: flex;
+  flex-wrap: wrap; /* 要素が折り返し可能 */
+  margin-top: 200px; /* ヘッダーの高さ分のマージンを追加 */
+}
+
+.leftcon{
+width: 59%;
+}
+
+
+
+.rightcon {
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightcon .item {
+  height: calc(50% - 10px); /* 各項目の高さを50%に設定し、10pxのマージンを考慮 */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px; /* 隙間を指定 */
+}
+
+.rightcon .item:last-child {
+  margin-bottom: 0; /* 最後の項目の下のマージンを0に設定 */
+}
+
+/* モバイル用スタイル */
+@media (max-width: 768px) {
+  .pickupnews {
+    flex-direction: column;
+  }
+
+  .leftcon {
+    width: 100%; /* 幅を100%に設定 */
+  }
+
+  .rightcon {
+    flex-direction: row; /* 横並びに設定 */
+    flex-wrap: wrap; /* 項目が溢れた場合に改行する */
+    width: 100%;
+  }
+
+  .rightcon .item {
+    width: 50%; /* 幅を100%に設定して縦並びに */
+    margin-bottom: 10px; /* 各項目の間のマージン */
+    
+  }
+}
+
+
+.subcon {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* 要素が折り返し可能 */
+  align-items: center; /* 縦方向の中央揃え */
+  justify-content: center; /* 横方向の中央揃え */
+}
+
+.subpicks {
+  width: 90%;
+  height: 350px;
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+  margin: auto; /* 自動的に中央に配置 */
+}
+
+.lotnews{
+  width: 100%;
+}
+
+
+.footerr {
+  background-color:#094; /* 背景色を修正 */
+  height: 300px;
 }

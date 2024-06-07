@@ -30,7 +30,7 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable"
 
-
+import CampaignRoundedIcon from '@mui/icons-material/CampaignRounded';
 
 
 //SSG
@@ -67,6 +67,37 @@ export function CarouselDemo() {
   );
 }
 
+
+export function CarouselSize() {
+  return (
+    <div className="relative w-full overflow-hidden">
+      <Carousel
+        opts={{
+          align: "start",
+        }}
+        className="w-full"
+      >
+        <CarouselContent className="flex ">
+          {Array.from({ length: 5 }).map((_, index) => (
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-2 flex justify-center">
+              <div className="p-1 ">
+                <Card className="h-30 w-30 md:h-60 md:w-60 lg:h-80 lg:w-80 justify-center">
+                  <CardContent className="flex aspect-square items-center justify-center p-6 ">
+                    <span className="text-3xl font-semibold">{index + 1}</span>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2" />
+        <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2" />
+      </Carousel>
+    </div>
+  );
+}
+
+
 export function CarouselSpacing() {
   return (
     <Carousel className="w-full max-w-sm">
@@ -90,7 +121,7 @@ export function CarouselSpacing() {
 }
 
 interface RiceDAO {
-  image: any;
+  image: string;
   id: string;
   title: string;
   body: string;
@@ -149,6 +180,7 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
+import CampaignRounded from '@mui/icons-material/CampaignRounded';
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
@@ -177,171 +209,76 @@ ListItem.displayName = "ListItem"
 
 
 
+
+
+
+
+
 // index.tsx のデフォルトエクスポート関数
 export default function Home({ ricedao }: { ricedao: RiceDAO[] }) {
   return (
     <>
     
-    <header className='headercontainer'>           
-    <img src="7D1866E4-F18D-4B76-B4DC-641A01A3E5DB.jpeg" className='logo'/>  
-     <div className='total-navigation'>
-     
-    <NavigationMenu >
-      
-      <NavigationMenuList>
-     
-      
-        <NavigationMenuItem>
-
-        <NavigationMenuTrigger className="text-2xl"><FaNewspaper  /> ニュース</NavigationMenuTrigger>
-          
-
-          
-
-          <NavigationMenuContent  className="bg-white" style={{ borderStyle: 'solid', borderWidth: '8px', borderColor: 'green'  }}>
-         
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md "
-                    href="/"
-                  >
-                    
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        
-        <NavigationMenuItem >
-          <NavigationMenuTrigger className="text-2xl items-center relative top-15 left-15" > <RiceBowlIcon></RiceBowlIcon><span>お米を買う</span> </NavigationMenuTrigger>
-
-          <NavigationMenuContent className="bg-white" style={{ borderStyle: 'solid', borderWidth: '8px', borderColor: 'green'  }}>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-       
-        <NavigationMenuItem>
-
-        <NavigationMenuTrigger className="text-2xl"><FaNewspaper  /> ニュース</NavigationMenuTrigger>
-          
-
-          
-
-          <NavigationMenuContent  className="bg-white" style={{ borderStyle: 'solid', borderWidth: '8px', borderColor: 'green'  }}>
-         
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md "
-                    href="/"
-                  >
-                    
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
-    </div>
-    </header>
 
   
-  <main className="container">
-    <ResizablePanelGroup
-      direction="horizontal"
-      className="w-full border-gray-300 rounded-lg "
-    >
-      <ResizablePanel defaultSize={100}>
-        <div className="flex h-full items-center justify-center p-6 ">
-          <span className="font-semibold"> {ricedao.length > 1 && <RiceDAOcards ricedao={ricedao[0]} />}</span>
-        </div>
-      </ResizablePanel>
-      <ResizableHandle />
-      
-     
-      <ResizablePanel defaultSize={80}>
-        <ResizablePanelGroup direction="vertical">
-          <ResizablePanel defaultSize={40}>
-            <div className="flex h-full items-center justify-center p-6  ">
-              <span className="font-semibold">{ricedao.length > 1 && <RiceDAOcards ricedao={ricedao[1]} />}</span>
-            </div>
-          </ResizablePanel>
-          <ResizableHandle />
-          <ResizablePanel defaultSize={40}>
-            <div className="flex h-full items-center justify-center p-6">
-              <span className="font-semibold">{ricedao.length > 2 && <RiceDAOcards ricedao={ricedao[2]} />}</span>
-            </div>
-          </ResizablePanel>
-        </ResizablePanelGroup>
-      </ResizablePanel>
-    </ResizablePanelGroup>
-      
-    <img src="A2B3D051-1961-49E3-8014-82F55408CE86.jpeg" className='adv'/>    
-       
+    <main className="pickupnews">
+    
+ 
+
+    <div className="leftcon">
+    <span className="font-semibold"> {ricedao.length > 0 && <RiceDAOcards ricedao={ricedao[0]} />}</span>
+    </div>
+
+    <div className="rightcon"> 
+
+    <span className="font-semibold ">{ricedao.length > 1 && <RiceDAOcards ricedao={ricedao[1]} />}</span>
+                 
+    <span className="font-semibold ">{ricedao.length > 2 && <RiceDAOcards ricedao={ricedao[2]} />}</span>
+    </div>               
             
-      
+    <div className='adv'>
+    <img src='A2B3D051-1961-49E3-8014-82F55408CE86.jpeg' />
+    </div>
+   
+    
+  <div className='lotnews flex flex-wrap justify-between'>
+  {ricedao.length > 3 && (
+    <span className="font-semibold w-1/2 p-2">
+      <RiceDAOcards ricedao={ricedao[3]} />
+    </span>
+  )}
+  {ricedao.length > 4 && (
+    <span className="font-semibold w-1/2 p-2">
+      <RiceDAOcards ricedao={ricedao[4]} />
+    </span>
+  )}
+  {ricedao.length > 5 && (
+    <span className="font-semibold w-1/2 p-2">
+      <RiceDAOcards ricedao={ricedao[5]} />
+    </span>
+  )}
+  {ricedao.length > 6 && (
+    <span className="font-semibold w-1/2 p-2">
+      <RiceDAOcards ricedao={ricedao[6]} />
+    </span>
+  )}
+  {ricedao.length > 7 && (
+    <span className="font-semibold w-1/2 p-2">
+      <RiceDAOcards ricedao={ricedao[7]} />
+    </span>
+  )}
+  {ricedao.length > 8 && (
+    <span className="font-semibold w-1/2 p-2">
+      <RiceDAOcards ricedao={ricedao[8]} />
+    </span>
+  )}
+</div>
 
-     
 
-     
-
+   </main>
 
 
-          
-    </main>
-        {/* ... */}
       
     </>
   );
 }
-
