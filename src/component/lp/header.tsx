@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Navigation from "@component/molecule/navigation";
 
 const Header = () => {
   return (
@@ -10,6 +11,9 @@ const Header = () => {
           <Image src="/LP/logo.png" alt=".come logo" width={156} height={65} />
         </Link>
       </h1>
+      <div className="flex items-center">
+        <Navigation />
+      </div>
     </header>
   );
 };
