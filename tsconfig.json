@@ -40,7 +40,6 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/Header.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [

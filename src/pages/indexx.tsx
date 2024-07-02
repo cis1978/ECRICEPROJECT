@@ -26,13 +26,13 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "@components/ui/carousel";
 
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/components/ui/resizable";
+} from "@components/ui/resizable";
 
 import CampaignRoundedIcon from "@mui/icons-material/CampaignRounded";
 
@@ -140,8 +140,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
+} from "@components/ui/navigation-menu";
+import { cn } from "@lib/utils";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -181,7 +181,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import { navigationMenuTriggerStyle } from "@components/ui/navigation-menu";
 import CampaignRounded from "@mui/icons-material/CampaignRounded";
 import Image from "next/image";
 const ListItem = React.forwardRef<
