@@ -183,6 +183,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import CampaignRounded from "@mui/icons-material/CampaignRounded";
+import Image from "next/image";
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
@@ -209,7 +210,7 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem";
 
 // index.tsx のデフォルトエクスポート関数
-export default function Home({ ricedao }: { ricedao: RiceDAO[] }) {
+export default function Homedepo({ ricedao }: { ricedao: RiceDAO[] }) {
   return (
     <>
       <main className="pickupnews">
@@ -231,7 +232,12 @@ export default function Home({ ricedao }: { ricedao: RiceDAO[] }) {
         </div>
 
         <div className="adv">
-          <img src="A2B3D051-1961-49E3-8014-82F55408CE86.jpeg" />
+          <Image
+            src="/A2B3D051-1961-49E3-8014-82F55408CE86.jpeg"
+            alt="our farmers"
+            width={400}
+            height={200}
+          />
         </div>
 
         <div className="lotnews flex flex-wrap justify-between">
