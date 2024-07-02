@@ -233,7 +233,7 @@ export default function Homedepo({ ricedao }: { ricedao: RiceDAO[] }) {
 
         <div className="adv">
           <Image
-            src="/A2B3D051-1961-49E3-8014-82F55408CE86.jpeg"
+            src="/EC/farmers.jpg"
             alt="our farmers"
             width={400}
             height={200}

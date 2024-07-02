@@ -52,7 +52,7 @@ const Header = () => {
     <header className="headercontainer">
       <Link href="/">
         <Image
-          src="/7D1866E4-F18D-4B76-B4DC-641A01A3E5DB.jpeg"
+          src="/EC/logo/logo_banner.jpeg"
           alt="ricedao logo"
           className="logo"
           height={50}
