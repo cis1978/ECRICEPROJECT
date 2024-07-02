@@ -1,6 +1,14 @@
 import React from "react";
 import "@styles/globals.css";
 import { Metadata } from "next";
+import { Noto_Serif_JP } from "next/font/google";
+
+// フォント
+const notoSerifJP = Noto_Serif_JP({
+  weight: ["400", "500", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-noto-serif-jp",
+});
 
 export const metadata: Metadata = {
   title: "RiceDAO",
@@ -15,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${notoSerifJP.className}`}>{children}</body>
     </html>
   );
 }

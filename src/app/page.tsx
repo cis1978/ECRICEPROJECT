@@ -1,10 +1,24 @@
 import React from "react";
+import Header from "@lp/header";
+import TopImage from "@lp/top-image";
+import BusinessModel from "@lp/business-model";
+import Testimonial from "@lp/testimonial";
+import HowItWorks from "@lp/how-it-works";
+import Network from "@lp/network";
+import Impact from "@lp/impact";
+import Footer from "@lp/footer";
 
 export default function Home() {
   return (
-    <main>
-      <h1>Home</h1>
-      <p>Welcome to the homepage.</p>
+    <main className="bg-black">
+      <Header />
+      <TopImage />
+      <BusinessModel />
+      <Testimonial />
+      <HowItWorks />
+      <Network />
+      <Impact />
+      <Footer />
     </main>
   );
 }
