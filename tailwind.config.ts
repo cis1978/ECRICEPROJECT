@@ -54,10 +54,10 @@ const config = {
         },
       },
       backgroundImage: {
-        "top-image": "url('/LP/bg/top-image.png')",
-        "testimonial": "url('/LP/bg/testimonial.png')",
-        "network": "url('/LP/bg/network.png')",
-        "footer": "url('/LP/bg/footer.png')",
+        top: "url('/LP/bg/top.png')",
+        testimonial: "url('/LP/bg/testimonial.png')",
+        network: "url('/LP/bg/network.png')",
+        footer: "url('/LP/bg/footer.png')",
       },
       borderRadius: {
         lg: "var(--radius)",

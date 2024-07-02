@@ -4,7 +4,7 @@ import SubscriptionForm from "../molecule/subscription-form";
 
 const TopImage = () => {
   return (
-    <div className="bg-top-image h-screen max-h-[832px] ">
+    <div className="bg-top h-screen max-h-[832px] ">
       <div className="container flex flex-col gap-6 py-40 px-20 text-white">
         <h1 className="text-7xl">
           <span className="font-bold">RICE DAO </span>
