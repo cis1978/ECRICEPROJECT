@@ -1,43 +1,45 @@
-
 // クライアントサイドの実行指示
 "use client";
 
 // 'next/link'からLinkコンポーネントをインポート
-import Link from 'next/link';
+import Link from "next/link";
 
-import RiceBowlIcon from '@mui/icons-material/RiceBowl';
+import RiceBowlIcon from "@mui/icons-material/RiceBowl";
 
-import { FaNewspaper, FaShoppingCart } from 'react-icons/fa'; // React Iconsからアイコンをインポート
+import { FaNewspaper, FaShoppingCart } from "react-icons/fa"; // React Iconsからアイコンをインポート
 
-import RiceDAOcards from '../components/RiceDAOcards';
+import RiceDAOcards from "../components/RiceDAOcards";
 
 // React とその他必要なモジュールのインポート
 import * as React from "react";
-import { Box } from '@mui/material';
+import { Box } from "@mui/material";
 
 // カスタムコンポーネントのインポート
-import Footer from '../components/Footer';
-import ActionAreaCard from '../components/Article';
+import Footer from "../components/Footer";
+import ActionAreaCard from "../components/Article";
 
-
-import { Card, CardContent } from '@mui/material';
+import { Card, CardContent } from "@mui/material";
 import { client } from "../lib/client";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/components/ui/resizable"
+} from "@/components/ui/resizable";
 
-import CampaignRoundedIcon from '@mui/icons-material/CampaignRounded';
-
+import CampaignRoundedIcon from "@mui/icons-material/CampaignRounded";
 
 //SSG
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: 'ricedao' });
+  const data = await client.get({ endpoint: "ricedao" });
 
-  console.log(data);
   return {
     props: {
       ricedao: data.contents,
@@ -53,7 +55,9 @@ export function CarouselDemo() {
           <CarouselItem key={index}>
             <div className="p-1">
               <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6" style={{ aspectRatio: '1 / 1.5' }}>
+                <CardContent
+                  className="flex aspect-square items-center justify-center p-6"
+                  style={{ aspectRatio: "1 / 1.5" }}>
                   <span className="text-4xl font-semibold">{index + 1}</span>
                 </CardContent>
               </Card>
@@ -67,7 +71,6 @@ export function CarouselDemo() {
   );
 }
 
-
 export function CarouselSize() {
   return (
     <div className="relative w-full overflow-hidden">
@@ -75,11 +78,12 @@ export function CarouselSize() {
         opts={{
           align: "start",
         }}
-        className="w-full"
-      >
+        className="w-full">
         <CarouselContent className="flex ">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-2 flex justify-center">
+            <CarouselItem
+              key={index}
+              className="md:basis-1/2 lg:basis-1/3 p-2 flex justify-center">
               <div className="p-1 ">
                 <Card className="h-30 w-30 md:h-60 md:w-60 lg:h-80 lg:w-80 justify-center">
                   <CardContent className="flex aspect-square items-center justify-center p-6 ">
@@ -96,7 +100,6 @@ export function CarouselSize() {
     </div>
   );
 }
-
 
 export function CarouselSpacing() {
   return (
@@ -137,9 +140,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuViewport,
-} from "@/components/ui/navigation-menu"
-import { cn } from "@/lib/utils"
-
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -177,10 +179,10 @@ const components: { title: string; href: string; description: string }[] = [
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-]
+];
 
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
-import CampaignRounded from '@mui/icons-material/CampaignRounded';
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import CampaignRounded from "@mui/icons-material/CampaignRounded";
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
@@ -194,8 +196,7 @@ const ListItem = React.forwardRef<
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
-          {...props}
-        >
+          {...props}>
           <div className="text-sm font-medium leading-none">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
@@ -203,82 +204,69 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
-
-
-
-
-
-
-
+  );
+});
+ListItem.displayName = "ListItem";
 
 // index.tsx のデフォルトエクスポート関数
 export default function Home({ ricedao }: { ricedao: RiceDAO[] }) {
   return (
     <>
-    
+      <main className="pickupnews">
+        <div className="leftcon">
+          <span className="font-semibold">
+            {" "}
+            {ricedao.length > 0 && <RiceDAOcards ricedao={ricedao[0]} />}
+          </span>
+        </div>
 
-  
-    <main className="pickupnews">
-    
- 
+        <div className="rightcon">
+          <span className="font-semibold ">
+            {ricedao.length > 1 && <RiceDAOcards ricedao={ricedao[1]} />}
+          </span>
 
-    <div className="leftcon">
-    <span className="font-semibold"> {ricedao.length > 0 && <RiceDAOcards ricedao={ricedao[0]} />}</span>
-    </div>
+          <span className="font-semibold ">
+            {ricedao.length > 2 && <RiceDAOcards ricedao={ricedao[2]} />}
+          </span>
+        </div>
 
-    <div className="rightcon"> 
+        <div className="adv">
+          <img src="A2B3D051-1961-49E3-8014-82F55408CE86.jpeg" />
+        </div>
 
-    <span className="font-semibold ">{ricedao.length > 1 && <RiceDAOcards ricedao={ricedao[1]} />}</span>
-                 
-    <span className="font-semibold ">{ricedao.length > 2 && <RiceDAOcards ricedao={ricedao[2]} />}</span>
-    </div>               
-            
-    <div className='adv'>
-    <img src='A2B3D051-1961-49E3-8014-82F55408CE86.jpeg' />
-    </div>
-   
-    
-  <div className='lotnews flex flex-wrap justify-between'>
-  {ricedao.length > 3 && (
-    <span className="font-semibold w-1/2 p-2">
-      <RiceDAOcards ricedao={ricedao[3]} />
-    </span>
-  )}
-  {ricedao.length > 4 && (
-    <span className="font-semibold w-1/2 p-2">
-      <RiceDAOcards ricedao={ricedao[4]} />
-    </span>
-  )}
-  {ricedao.length > 5 && (
-    <span className="font-semibold w-1/2 p-2">
-      <RiceDAOcards ricedao={ricedao[5]} />
-    </span>
-  )}
-  {ricedao.length > 6 && (
-    <span className="font-semibold w-1/2 p-2">
-      <RiceDAOcards ricedao={ricedao[6]} />
-    </span>
-  )}
-  {ricedao.length > 7 && (
-    <span className="font-semibold w-1/2 p-2">
-      <RiceDAOcards ricedao={ricedao[7]} />
-    </span>
-  )}
-  {ricedao.length > 8 && (
-    <span className="font-semibold w-1/2 p-2">
-      <RiceDAOcards ricedao={ricedao[8]} />
-    </span>
-  )}
-</div>
-
-
-   </main>
-
-
-      
+        <div className="lotnews flex flex-wrap justify-between">
+          {ricedao.length > 3 && (
+            <span className="font-semibold w-1/2 p-2">
+              <RiceDAOcards ricedao={ricedao[3]} />
+            </span>
+          )}
+          {ricedao.length > 4 && (
+            <span className="font-semibold w-1/2 p-2">
+              <RiceDAOcards ricedao={ricedao[4]} />
+            </span>
+          )}
+          {ricedao.length > 5 && (
+            <span className="font-semibold w-1/2 p-2">
+              <RiceDAOcards ricedao={ricedao[5]} />
+            </span>
+          )}
+          {ricedao.length > 6 && (
+            <span className="font-semibold w-1/2 p-2">
+              <RiceDAOcards ricedao={ricedao[6]} />
+            </span>
+          )}
+          {ricedao.length > 7 && (
+            <span className="font-semibold w-1/2 p-2">
+              <RiceDAOcards ricedao={ricedao[7]} />
+            </span>
+          )}
+          {ricedao.length > 8 && (
+            <span className="font-semibold w-1/2 p-2">
+              <RiceDAOcards ricedao={ricedao[8]} />
+            </span>
+          )}
+        </div>
+      </main>
     </>
   );
 }
