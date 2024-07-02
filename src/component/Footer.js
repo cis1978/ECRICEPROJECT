@@ -1,6 +1,6 @@
 // Footer.js
 import React from 'react';
-import { Button } from "@/components/ui/button"
+import { Button } from "@component/ui/button"
 import { green } from '@mui/material/colors';
 
 const Footer = () => {

@@ -1,5 +1,5 @@
-import Header from "components/Header";
-import Footer from "components/Footer"; // Corrected import statement for Footer
+import Header from "@component/Header";
+import Footer from "@component/Footer"; // Corrected import statement for Footer
 
 export default function Layout({ children }) {
   return (

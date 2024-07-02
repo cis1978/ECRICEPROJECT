@@ -8,15 +8,15 @@ import RiceBowlIcon from "@mui/icons-material/RiceBowl";
 
 import { FaNewspaper, FaShoppingCart } from "react-icons/fa"; // React Iconsからアイコンをインポート
 
-import RiceDAOcards from "../components/RiceDAOcards";
+import RiceDAOcards from "../component/RiceDAOcards";
 
 // React とその他必要なモジュールのインポート
 import * as React from "react";
 import { Box } from "@mui/material";
 
 // カスタムコンポーネントのインポート
-import Footer from "../components/Footer";
-import ActionAreaCard from "../components/Article";
+import Footer from "../component/Footer";
+import ActionAreaCard from "../component/Article";
 
 import { Card, CardContent } from "@mui/material";
 import { client } from "../lib/client";
@@ -26,13 +26,13 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@components/ui/carousel";
+} from "@component/ui/carousel";
 
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@components/ui/resizable";
+} from "@component/ui/resizable";
 
 import CampaignRoundedIcon from "@mui/icons-material/CampaignRounded";
 
@@ -140,7 +140,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuViewport,
-} from "@components/ui/navigation-menu";
+} from "@component/ui/navigation-menu";
 import { cn } from "@lib/utils";
 
 const components: { title: string; href: string; description: string }[] = [
@@ -181,7 +181,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
-import { navigationMenuTriggerStyle } from "@components/ui/navigation-menu";
+import { navigationMenuTriggerStyle } from "@component/ui/navigation-menu";
 import CampaignRounded from "@mui/icons-material/CampaignRounded";
 import Image from "next/image";
 const ListItem = React.forwardRef<

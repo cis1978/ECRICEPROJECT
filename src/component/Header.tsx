@@ -1,4 +1,4 @@
-// components/Header.tsx
+// component/Header.tsx
 "use client";
 
 import Link from "next/link";
@@ -13,8 +13,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
+} from "@component/ui/navigation-menu";
+import { cn } from "@lib/utils";
 import React from "react";
 import Image from "next/image";
 

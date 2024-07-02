@@ -16,18 +16,19 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": "./src",
     "paths": {
       "@/*": [
-        "./src/*"
+        "./*"
       ],
-      "@components/*": [
-        "./src/components/*"
+      "@component/*": [
+        "./component/*"
       ],
       "@lp/*": [
-        "./src/components/lp/*"
+        "./component/lp/*"
       ],
       "@lib/*": [
-        "./src/lib/*"
+        "./lib/*"
       ],
     },
     "plugins": [
