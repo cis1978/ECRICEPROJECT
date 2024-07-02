@@ -1,6 +1,6 @@
 import React from "react";
-import SocialMedia from "../molecule/social-media";
-import SubscriptionForm from "../molecule/subscription-form";
+import SocialMedia from "@component/molecule/social-media";
+import SubscriptionForm from "@component/molecule/subscription-form";
 
 const TopImage = () => {
   return (

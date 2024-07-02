@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${notoSerifJP.className}`}>{children}</body>
+      <body className={notoSerifJP.className}>{children}</body>
     </html>
   );
 }

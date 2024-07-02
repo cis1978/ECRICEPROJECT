@@ -8,7 +8,7 @@ const Header = () => {
     <header className="flex py-6 justify-between container absolute top-0 right-0 left-0 z-10">
       <h1>
         <Link href="/">
-          <Image src="/LP/logo.png" alt=".come logo" width={156} height={65} />
+          <Image src="/LP/logo.png" alt="logo" width={156} height={65} />
         </Link>
       </h1>
       <div className="flex items-center">
