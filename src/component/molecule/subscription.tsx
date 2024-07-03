@@ -1,24 +1,28 @@
 import React from "react";
 import Button from "@component/atom/button";
 import { MailIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const Subscription = () => {
+  const t = useTranslations("subscription");
   return (
     <form>
-      <label className="text-xl">Get notified</label>
+      <label className="text-xl">{t("label")}</label>
       <div className="flex">
         <input
           type="email"
           className="bg-transparent border-b border-gray-500"
           id="email"
           aria-describedby="emailHelp"
-          placeholder="Enter your email"
+          placeholder={t("placeholder")}
         />
-        <Button label="Subscribe" href="" startIcon={<MailIcon size={20} />} />
+        <Button
+          label={t("button")}
+          href=""
+          startIcon={<MailIcon size={20} />}
+        />
       </div>
-      <small id="emailHelp">
-        We will never share your email with anyone else.
-      </small>
+      <small id="emailHelp">{t("help")}</small>
     </form>
   );
 };
