@@ -1,0 +1,163 @@
+{
+  "topImage": {
+    "catchphrase": "RICE DAO is the future of agricultural business",
+    "description": "We're on a mission to transfer nearly 340,000 agricultural businesses<br></br>struggling with succession issues into the hands of hard-working<br></br>aspiring farmers and help generations of business owners retire confidently."
+  },
+  "businessModel": {
+    "title": "Win-win<br></br>business model",
+    "description": "RICE DAO is co-ownership platform for agricultural business, facing shortages of successors. ",
+    "contents": {
+      "problem": {
+        "title": "The problem",
+        "number": "70%",
+        "complement": "of agricultural businesses have not found successors",
+        "description": "Agricultural businesses are the backbone of Japan's rural economy, supporting the country's food self-sufficiency rate and playing a crucial role in preserving traditional rural culture.<br></br>However, when agricultural business owners retire, 70% fail to find successors, often forcing them to give up their farmland.<br></br>The owners lose their lifetime assets and legacy, employees lose their jobs, and communities lose valuable food production sites and cultural resources."
+      },
+      "solution": {
+        "title": "Our solution",
+        "number": "80%",
+        "complement": "aspiring farmers ownership within 20 years",
+        "description": "RICE DAO buys agricultural businesses from retiring owners, grants 10% ownership of the business's stock to aspiring farmers after closing, and progressively increases aspiring farmers ownership to 80% within 20 years. Aspiring Farmers earn stock through ongoing service. They do not have to buy stock.<br></br>We do this because we believe co-ownership is a win-win, with better financial outcomes for the aspiring farmers and the DAO members.<br></br>The result is a network of financially durable companies that never have to be sold again. Retiring owners, Aspiring farmers, DAO members, and local economies are all better off."
+      }
+    }
+  },
+  "testimonial": {
+    "title": "Testimonial",
+    "contents": {
+      "akiraK": {
+        "name": "Kiminami AKira",
+        "affiliation": "Professor of UTokyo",
+        "comment": "This can be truly impactful solution."
+      },
+      "lilyT": {
+        "name": "Tani Lily",
+        "affiliation": "Author of 『稲作SDGs -",
+        "comment": "This can be absolutely impactful solution."
+      },
+      "daisukeO": {
+        "name": "Daisuke Oyaizu",
+        "affiliation": "Japanese Chef",
+        "comment": "This can be  extremely impactful solution."
+      },
+      "shihoK": {
+        "name": "Shiho Kamada",
+        "affiliation": "Student of UTokyo",
+        "comment": "This can be  extremely impactful solution."
+      },
+      "yukiS": {
+        "name": "Yuki Shiraishi",
+        "affiliation": "Student of UTokyo",
+        "comment": "This can be  extremely impactful solution."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "contents": {
+      "01": {
+        "title": "Retiring Owners",
+        "description": "Agricultural business owners retire confidently by selling their business to RICE DAO, which is fairly and equitably operated with the aim of creating a sustainable rice-based society. Their business remains local and their legacy becomes aspiring farmers ownership."
+      },
+      "02": {
+        "title": "Aspiring Farmers",
+        "description": "RICE DAO recruits a mission-driven, aspiring farmer to lead the harvesting forward. They begin with an intensive training program and continue to learn through on-the-ground experience and support from the RICE DAO network. They earn stock ownership through continued service in the business and now benefit from the upside of the company's growth. "
+      },
+      "03": {
+        "title": "Impact enthusiast",
+        "description": "Impact enthusiast can buy the ownership of RICE DAO in a form similar to Social Lending, or they can simply acquire ownership by purchasing rice from .COME or contributing to its spread on social media, as a portion of .COME's profits is returned to RICE DAO. Furthermore, with the promotion of automation, one can become a part of the farming community without physically visiting the site, thus blurring the boundaries between consumers and producers."
+      }
+    }
+  },
+  "network": {
+    "title": "Our growing network",
+    "contents": {
+      "prefecture": {
+        "num": "16",
+        "unit": "prefectures"
+      },
+      "followers": {
+        "num": "1k",
+        "unit": "followers"
+      },
+      "studentAssociation": {
+        "num": "5",
+        "unit": "student associations"
+      },
+      "businessOwner": {
+        "num": "10",
+        "unit": "business owners"
+      },
+      "aspiringFarmer": {
+        "num": "20",
+        "unit": "aspiring farmers"
+      }
+    }
+  },
+  "impact": {
+    "title": "Our Impact",
+    "description": "We aim to sustain Japan's rice-based society by succeeding the agricultural businesses lacking successors, while also enabling consumers to hold ownership.<br></br>Through the promotion of agricultural automation and labor-saving techniques, we make it easy for all consumers to become involved in agriculture as 'farmers'",
+    "diagram": {
+      "aspiringFarmer": {
+        "to": "For aspiring farmer",
+        "description": "Interested in leading a co-owned agricultural business?",
+        "learnMore": "Learn more about our Starting Program."
+      },
+      "owner": {
+        "to": "For owner",
+        "description": "Why RICE DAO is the right fit for retiring owners",
+        "learnMore": "Learn more about why we're the buyer of choice for many business owners."
+      },
+      "impactEnthusiast": {
+        "to": "For impact enthusiast",
+        "description": "Interested in making an impact on Japanese agriculture?",
+        "learnMore": ""
+      },
+      "details": "show more details"
+    }
+  },
+  "footer": {
+    "ricedao": {
+      "title": "RICE DAO",
+      "pages": {
+        "aspiringFarmer": "For aspiring farmer",
+        "owner": "For owner",
+        "impactEnthusiast": "For impact enthusiast"
+      }
+    },
+    "about": {
+      "title": "About",
+      "pages": {
+        "team": "Team",
+        "dev": "Developping",
+        "legal": "Legal"
+      }
+    },
+    "buyRice": {
+      "title": "Buy rice",
+      "pages": {
+        "search": "Search"
+      }
+    },
+    "media": {
+      "title": "News/Topics",
+      "pages": {
+        "news": "News",
+        "topics": "Topics"
+      }
+    },
+    "project": {
+      "title": "Project",
+      "pages": {
+        "rice": "Rice projects",
+        "sake": "Sake projects"
+      }
+    },
+    "copyright": "© 2024 .COME Inc. All rights reserved."
+  },
+  "subscription": {
+    "label": "Get notified",
+    "placeholder": "Enter your email",
+    "button": "Subscribe",
+    "help": "We'll never share your email with anyone else."
+  }
+}
