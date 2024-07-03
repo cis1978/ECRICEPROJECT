@@ -77,11 +77,19 @@
       },
       "followers": {
         "num": "1k",
-        "unit": "follower"
+        "unit": "followers"
       },
       "studentAssociation": {
         "num": "5",
-        "unit": "student association"
+        "unit": "student associations"
+      },
+      "businessOwner": {
+        "num": "10",
+        "unit": "business owners"
+      },
+      "aspiringFarmer": {
+        "num": "20",
+        "unit": "aspiring farmers"
       }
     }
   },
