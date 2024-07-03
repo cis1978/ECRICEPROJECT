@@ -21,7 +21,7 @@ const Network = () => {
 
   return (
     <div className="bg-network bg-cover text-white py-10">
-      <h2 className="text-5xl ml-10 mb-5">{t("title")}</h2>
+      <h2 className="text-5xl ml-10 mb-8">{t("title")}</h2>
       <Carousel slides={slides} options={options} />
     </div>
   );
