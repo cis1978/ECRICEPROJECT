@@ -1,26 +1,16 @@
 import React from "react";
 import SocialMedia from "@component/molecule/social-media";
 import Subscription from "@/component/molecule/subscription";
+import { useTranslations } from "next-intl";
 
 const TopImage = () => {
+  const t = useTranslations("topImage");
+
   return (
-    <div className="bg-top h-[832px] ">
+    <div className="bg-top bg-cover h-[832px] ">
       <div className="container flex flex-col gap-6 py-40 px-20 text-white">
-        <h1 className="text-7xl">
-          <span className="font-bold">RICE DAO </span>
-          is the future
-          <br />
-          of agricultural business
-        </h1>
-        <p className="text-xl">
-          We are on a mission to transfer nearly 340,000 agricultural businesses
-          <br />
-          struggling with succession issues into the hands of hard-working
-          <br />
-          aspiring farmers and help generations of business owners retire
-          <br />
-          confidently.
-        </p>
+        <h1 className="text-7xl">{t("catchphrase")}</h1>
+        <p className="text-xl">{t.rich("description", { br: () => <br /> })}</p>
         <SocialMedia />
         <Subscription />
       </div>

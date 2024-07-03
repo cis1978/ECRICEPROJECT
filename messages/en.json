@@ -135,6 +135,7 @@
   "subscription": {
     "label": "Get notified",
     "placeholder": "Enter your email",
-    "button": "Subscribe"
+    "button": "Subscribe",
+    "help": "We'll never share your email with anyone else."
   }
 }
