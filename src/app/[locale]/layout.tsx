@@ -2,6 +2,8 @@ import React from "react";
 import "@styles/globals.css";
 import { Metadata } from "next";
 import { Noto_Serif_JP } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 
 // フォント
 const notoSerifJP = Noto_Serif_JP({
@@ -16,14 +18,24 @@ export const metadata: Metadata = {
     "RiceDAO is a decentralized autonomous organization (DAO) that aims to support the rice industry.",
 };
 
-export default function RootLayout({
-  children,
-}: {
+interface LocaleLayoutProps {
   children: React.ReactNode;
-}) {
+  params: { locale: string };
+}
+
+export default async function LocaleLayout({
+  children,
+  params: { locale },
+}: LocaleLayoutProps) {
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
-      <body className={notoSerifJP.className}>{children}</body>
+    <html lang={locale}>
+      <body className={notoSerifJP.className}>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }
