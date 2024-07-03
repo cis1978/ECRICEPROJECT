@@ -20,8 +20,8 @@ const HowItWorks = () => {
 const HowItWorksRow = ({ mark }: { mark: string }) => {
   return (
     <div
-      className={"flex ".concat(
-        mark === "02" ? "flex-row-reverse" : "flex-row"
+      className={"flex items-end".concat(
+        mark === "02" ? " flex-row-reverse" : ""
       )}>
       <div className="w-1/2">
         {mark === "03" ? (
