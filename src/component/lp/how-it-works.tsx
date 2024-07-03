@@ -9,7 +9,7 @@ const HowItWorks = () => {
 
   return (
     <div className="flex flex-col items-center gap-14 bg-white px-10 py-20">
-      <h2 className="text-4xl font-extrabold">{t("title")}</h2>
+      <h2 className="text-5xl font-extrabold">{t("title")}</h2>
       {marks.map((mark, index) => (
         <HowItWorksRow key={`howItWorks-${index}`} mark={mark} />
       ))}

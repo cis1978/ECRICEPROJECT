@@ -20,8 +20,8 @@ const Testimonial = () => {
   ));
 
   return (
-    <div className="bg-testimonial bg-cover text-white py-5">
-      <h2 className="text-4xl ml-10 mb-5">{t("title")}</h2>
+    <div className="bg-testimonial bg-cover text-white py-10">
+      <h2 className="text-5xl ml-10 mb-5">{t("title")}</h2>
       <Carousel slides={slides} options={options} />
     </div>
   );
