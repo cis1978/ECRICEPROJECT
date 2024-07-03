@@ -54,15 +54,15 @@
   "howItWorks": {
     "title": "How it works",
     "contents": {
-      "one": {
+      "01": {
         "title": "Retiring Owners",
         "description": "Agricultural business owners retire confidently by selling their business to RICE DAO, which is fairly and equitably operated with the aim of creating a sustainable rice-based society. Their business remains local and their legacy becomes aspiring farmers ownership."
       },
-      "two": {
+      "02": {
         "title": "Aspiring Farmers",
         "description": "RICE DAO recruits a mission-driven, aspiring farmer to lead the harvesting forward. They begin with an intensive training program and continue to learn through on-the-ground experience and support from the RICE DAO network. They earn stock ownership through continued service in the business and now benefit from the upside of the company's growth. "
       },
-      "three": {
+      "03": {
         "title": "Impact enthusiast",
         "description": "Impact enthusiast can buy the ownership of RICE DAO in a form similar to Social Lending, or they can simply acquire ownership by purchasing rice from .COME or contributing to its spread on social media, as a portion of .COME's profits is returned to RICE DAO. Furthermore, with the promotion of automation, one can become a part of the farming community without physically visiting the site, thus blurring the boundaries between consumers and producers."
       }
