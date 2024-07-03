@@ -15,7 +15,7 @@ const Testimonial = () => {
     "yukiS",
   ];
 
-  const slides = witnesses.map((id) => <TestimonialCard id={id} />);
+  const slides = witnesses.map((id) => <TestimonialCard key={id} id={id} />);
 
   return (
     <div className="bg-testimonial bg-cover text-white py-5">
