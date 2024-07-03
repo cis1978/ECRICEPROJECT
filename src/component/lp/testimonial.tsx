@@ -15,7 +15,9 @@ const Testimonial = () => {
     "yukiS",
   ];
 
-  const slides = witnesses.map((id) => <TestimonialCard key={id} id={id} />);
+  const slides = witnesses.map((witness, index) => (
+    <TestimonialCard key={`testimonial-${index}`} witness={witness} />
+  ));
 
   return (
     <div className="bg-testimonial bg-cover text-white py-5">
@@ -25,8 +27,8 @@ const Testimonial = () => {
   );
 };
 
-const TestimonialCard = ({ id }: { id: string }) => {
-  const t = useTranslations(`testimonial.contents.${id}`);
+const TestimonialCard = ({ witness }: { witness: string }) => {
+  const t = useTranslations(`testimonial.contents.${witness}`);
   return (
     <div className="flex flex-col justify-between text-center gap-5 bg-white rounded-3xl text-black aspect-video p-8">
       <h3 className="text-2xl">{t(`comment`)}</h3>
