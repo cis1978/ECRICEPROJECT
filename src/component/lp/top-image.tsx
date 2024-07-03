@@ -13,7 +13,7 @@ const TopImage = () => {
           of agricultural business
         </h1>
         <p className="text-xl">
-          We're on a mission to transfer nearly 340,000 agricultural businesses
+          We are on a mission to transfer nearly 340,000 agricultural businesses
           <br />
           struggling with succession issues into the hands of hard-working
           <br />
