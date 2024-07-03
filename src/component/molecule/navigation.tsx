@@ -1,6 +1,6 @@
-import Button from "@component/atom/button";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import Button from "@component/atom/button";
 
 const Navigation = () => {
   const SectionInfo = [
