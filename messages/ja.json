@@ -98,15 +98,19 @@
     "description": "We aim to sustain Japan's rice-based society by succeeding the agricultural businesses lacking successors, while also enabling consumers to hold ownership.<br></br>Through the promotion of agricultural automation and labor-saving techniques, we make it easy for all consumers to become involved in agriculture as 'farmers'",
     "diagram": {
       "aspiringFarmer": {
+        "to": "For aspiring farmer",
         "description": "Interested in leading a co-owned agricultural business?",
         "learnMore": "Learn more about our Starting Program."
       },
       "owner": {
+        "to": "For owner",
         "description": "Why RICE DAO is the right fit for retiring owners",
         "learnMore": "Learn more about why we're the buyer of choice for many business owners."
       },
       "impactEnthusiast": {
-        "description": "Interested in making an impact on Japanese agriculture?"
+        "to": "For impact enthusiast",
+        "description": "Interested in making an impact on Japanese agriculture?",
+        "learnMore": ""
       },
       "details": "show more details"
     }
