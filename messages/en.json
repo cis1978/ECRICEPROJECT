@@ -22,7 +22,7 @@
     }
   },
   "testimonial": {
-    "title": "Testimonials",
+    "title": "Testimonial",
     "contents": {
       "akiraK": {
         "name": "Kiminami AKira",
@@ -37,6 +37,16 @@
       "daisukeO": {
         "name": "Daisuke Oyaizu",
         "affiliation": "Japanese Chef",
+        "comment": "This can be  extremely impactful solution."
+      },
+      "shihoK": {
+        "name": "Shiho Kamada",
+        "affiliation": "Student of UTokyo",
+        "comment": "This can be  extremely impactful solution."
+      },
+      "yukiS": {
+        "name": "Yuki Shiraishi",
+        "affiliation": "Student of UTokyo",
         "comment": "This can be  extremely impactful solution."
       }
     }
