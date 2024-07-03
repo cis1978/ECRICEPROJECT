@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@component/atom/button";
 import { MailIcon } from "lucide-react";
 
-const SubscriptionForm = () => {
+const Subscription = () => {
   return (
     <form>
       <label className="text-xl">Get notified</label>
@@ -23,4 +23,4 @@ const SubscriptionForm = () => {
   );
 };
 
-export default SubscriptionForm;
+export default Subscription;
